@@ -4,7 +4,7 @@
 
 - I am used to using DynamoDB
 - I want to self host the DB
-- I want a large number (100+) concurrent transactions (DynamoDB supports only 30)
+- I want a large number (100+) concurrent transactions (DynamoDB is not optimized for concurrent transactions and I have hit the limit before)
 - I could use Postgres, but I dont want to:
   - Use all the complex things Postgres allows you to do like joins and stored procedures
   - Hand create a schema
