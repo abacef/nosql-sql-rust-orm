@@ -1,0 +1,17 @@
+[package]
+name = "nosql-sql-rust-orm"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+schema_generator = { path = "schema_generator" }
+rust_decimal = { version = "1.37", features = [
+    "db-tokio-postgres",
+    "db-postgres",
+    "serde",
+    "serde-with-arbitrary-precision",
+] }
+tokio-postgres = { version = "0.7", features = ["with-chrono-0_4"] }
+chrono = "0.4"
+deadpool-postgres = "0.10"
+r-lombok-macros = "0.0"

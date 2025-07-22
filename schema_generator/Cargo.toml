@@ -1,0 +1,12 @@
+[package]
+name = "schema_generator"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+syn = { version = "1.0", features = ["full"] }
+quote = "1.0"
+proc-macro2 = "1.0"
+const_format = "0.2"
+indoc = "1.0"
+
