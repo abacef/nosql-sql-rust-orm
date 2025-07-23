@@ -1,0 +1,17 @@
+[package]
+name = "schema_and_dao"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+schema_generator = { path = "../schema_generator" }
+
+# deadpool-postgres = "0.10"
+
+quote = "1.0"
+proc-macro2 = "1.0"
+
+[lib]
+proc-macro = true
+
+

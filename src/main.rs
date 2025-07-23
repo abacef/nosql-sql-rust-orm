@@ -1,20 +1,7 @@
-use schema_generator::{Field, Schema, Table};
+use schema_and_dao::generate_sql_schema;
 
 fn main() {
+    generate_sql_schema!();
+
     
-    let user_table_name = "User";
-    let user_table_fields = vec![
-        Field::id("user_id"),
-        Field::unique_string_variable_length("username")
-    ];
-    let users_table = Table::new(
-        user_table_name,
-        user_table_fields
-    );
-
-    let schema = Schema::new(vec![
-        users_table
-    ]);
-
-    println!("{}", schema.sqlitize())
 }

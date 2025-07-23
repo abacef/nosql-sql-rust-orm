@@ -1,4 +1,3 @@
-use indoc::indoc;
 use proc_macro2::TokenStream;
 use quote::{format_ident, quote};
 use syn::{Ident, Type, parse_str};
@@ -64,7 +63,7 @@ impl Table {
             name, fields, composite_uniqueness, primary_key
         }
     }
-    fn new_join_table(table_1: &str, table_1_id: &str, table_2: &str, table_2_id: &str) -> Table {
+    pub fn new_join_table(table_1: &str, table_1_id: &str, table_2: &str, table_2_id: &str) -> Table {
         Table {
             name: format!("{table_1}To{table_2}JoinTable"),
             fields: vec![
@@ -393,12 +392,12 @@ impl Field {
             reference: None,
         }
     }
-    fn date(name: &str, unique: bool, nullable: bool) -> Field {
+    pub fn date_time(name: &str) -> Field {
         Field {
             name: name.to_string(),
             typ: FieldType::DateTime,
-            nullable,
-            unique,
+            nullable: false,
+            unique: false,
             reference: None,
         }
     }
