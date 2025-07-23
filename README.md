@@ -56,7 +56,7 @@ With these two tables written in a proc macro called `generate_sql_schema`, we c
 generate_sql_schema!();
 ```
 
-Now we can initialize the database and add a user and their interests. Note how we do not need to write sql statements for many of the desired logic.
+Now we can initialize the database and add a user and their interests. Note how we do not need to write sql statements for many of the desired logic. Also note how the sql schema statements have been generated in a string where we can just run them to create the tables.
 ```rust
 // initialize the database with the sql schema
 db_client.execute(DB_SCHEMA_SQL).unwrap();
