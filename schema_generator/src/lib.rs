@@ -65,7 +65,7 @@ impl Table {
     }
     pub fn new_join_table(table_1: &str, table_1_id: &str, table_2: &str, table_2_id: &str) -> Table {
         Table {
-            name: format!("{table_1}To{table_2}JoinTable"),
+            name: format!("{table_2}For{table_1}"),
             fields: vec![
                 Field {
                     name: table_1_id.to_string(),
