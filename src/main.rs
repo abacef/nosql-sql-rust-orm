@@ -29,6 +29,6 @@ fn main() {
     // let interests: Vec<String> = InterestForUser::getInterests(user_id, &db_client);
     // println!("{interests}");
 
-    // let retreived_user = User::get_from_table(user_id, &db_client);
-    // retreived_user.delete_self_from_table(&db_client);
+    // let retrieved_user = User::get_from_table(user_id, &db_client);
+    // retrieved_user.delete_self_from_table(&db_client);
 }
